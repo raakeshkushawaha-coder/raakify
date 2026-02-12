@@ -96,7 +96,13 @@
 </div>
 
 <script>
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+});
 </script>
+
