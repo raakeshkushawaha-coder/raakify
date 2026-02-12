@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online tools for everyday tasks. Generate QR codes, count words, and create secure passwords instantly.">
+    <title>Raakify - Free Online Tools for Everyday Tasks</title>
+    <meta name="description" content="Raakify offers free online tools for everyday tasks. Generate QR codes, count words, and create secure passwords instantly. No signup required. 100% free and privacy-focused.">
+    <meta name="keywords" content="free online tools, qr code generator, word counter, password generator, utility tools, free productivity tools">
+    <meta name="author" content="Raakify">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://raakify.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#4F46E5">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Raakify – Free Online Tools for Everyday Tasks">
+    <meta property="og:description" content="Generate QR codes, count words, and create secure passwords instantly. 100% free. No signup required.">
+    <meta property="og:url" content="https://raakify.com/">
+    <meta property="og:site_name" content="Raakify">
+    <meta property="og:image" content="https://raakify.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Raakify – Free Online Productivity Tools">
+    <meta name="twitter:description" content="Create QR codes, count words & generate secure passwords instantly. Free and privacy-focused tools.">
+    <meta name="twitter:image" content="https://raakify.com/og-image.jpg">
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Raakify",
+      "url": "https://raakify.com/",
+      "description": "Free online tools including QR Code Generator, Word Counter, and Password Generator.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://raakify.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* CSS Variables */
+        :root {
+            --primary-color: #4F46E5;
+            --secondary-color: #10B981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header / Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-icon {
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-gray);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .stats-bar {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Tools Showcase Section */
+        .tools-section {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+        }
+
+        .tools-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .tool-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .tool-description {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .tool-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-features li {
+            padding: 0.5rem 0;
+            color: var(--text-gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .tool-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+
+
+        .tool-actions {
+            margin-top: auto;
+        }
+
+        .btn-tool {
+            background: var(--primary-color);
+            color: var(--white);
+            width: 100%;
+        }
+
+        .btn-tool:hover {
+            background: #4338ca;
+        }
+
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .steps-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--text-gray);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .testimonial-role {
+            color: var(--text-gray);
+            font-size: 0.875rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-gray);
+            display: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #6366f1 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            padding: 0.25rem 0;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--white);
+            padding-left: 0.5rem;
+        }
+
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .newsletter-signup {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-signup input {
+            flex: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+        }
+
+        .newsletter-signup button {
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .stats-bar {
+                gap: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Raakify</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <span class="search-icon">🔍</span>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Free Online Tools for Everyday Tasks</h1>
+            <p>Generate QR codes, count words, create passwords instantly. No signup required.</p>
+            <div class="cta-buttons">
+                <a href="#tools" class="btn btn-primary">Try Free Tools</a>
+                <a href="#features" class="btn btn-secondary">See Features</a>
+            </div>
+            <div class="stats-bar">
+                <div class="stat">
+                    <strong>10,000+</strong>
+                    QR Codes Generated
+                </div>
+                <div class="stat">
+                    <strong>50,000+</strong>
+                    Words Counted
+                </div>
+                <div class="stat">
+                    <strong>1,000+</strong>
+                    Passwords Created
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Showcase Section -->
+    <section class="tools-section" id="tools">
+        <div class="section-header">
+            <h2>Our Tools</h2>
+            <p>Simple, powerful tools to boost your productivity</p>
+        </div>
+        <div class="tools-grid">
+            <!-- QR Code Generator -->
+            <div class="tool-card">
+                <div class="tool-icon">📱</div>
+                <h3>QR Code Generator</h3>
+                <p class="tool-description">Create custom QR codes for any purpose in seconds</p>
+                <ul class="tool-features">
+                    <li>Customize colors and design</li>
+                    <li>Add logos and branding</li>
+                    <li>Download in multiple formats</li>
+                </ul>
+                <div class="tool-actions">
+                    <a href="qr-generator.html" class="btn btn-tool">Open Tool</a>
+                </div>
+            </div>
+
+            <!-- Word Counter -->
+            <div class="tool-card">
+                <div class="tool-icon">📝</div>
+                <h3>Word Counter</h3>
+                <p class="tool-description">Analyze text with SEO insights and readability metrics</p>
+                <ul class="tool-features">
+                    <li>Real-time word & character count</li>
+                    <li>Reading time estimation</li>
+                    <li>Keyword density analysis</li>
+                </ul>
+                <div class="tool-actions">
+                    <a href="wordcounter.html" class="btn btn-tool">Open Tool</a>
+
+                </div>
+            </div>
+
+            <!-- Password Generator -->
+            <div class="tool-card">
+                <div class="tool-icon">🔐</div>
+                <h3>Password Generator</h3>
+                <p class="tool-description">Create secure passwords with customizable options</p>
+                <ul class="tool-features">
+                    <li>Adjustable length & complexity</li>
+                    <li>Include symbols & numbers</li>
+                    <li>Instant security strength check</li>
+                </ul>
+                <div class="tool-actions">
+                    <a href="password-generator.html" class="btn btn-tool">Open Tool</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Get started in three simple steps</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Choose Your Tool</h3>
+                <p>Select from our collection of free online tools designed for everyday tasks</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Customize Settings</h3>
+                <p>Adjust options to match your specific needs and preferences</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get Results Instantly</h3>
+                <p>Download or copy your results immediately with no delays</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Why Choose raakify?</h2>
+            <p>Everything you need, nothing you don't</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>100% Free Forever</h3>
+                <p>All tools completely free with no hidden costs or premium plans</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Instant Results</h3>
+                <p>Lightning-fast processing with results in milliseconds</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy Focused</h3>
+                <p>Your data stays on your device - we don't store anything</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Friendly</h3>
+                <p>Works perfectly on all devices from phones to desktops</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>No Registration</h3>
+                <p>Start using tools immediately without creating an account</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is it really free?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! All our tools are 100% free to use with no hidden costs, premium plans, or subscription fees. We believe in making useful tools accessible to everyone.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you store my data?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    No, we don't store any of your data. All processing happens locally in your browser, ensuring complete privacy and security. Your information never leaves your device.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I use the tools?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Simply click on any tool, input your data or customize the settings, and get instant results. No tutorials needed - our tools are designed to be intuitive and user-friendly.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I use it on mobile?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! All our tools are fully responsive and work perfectly on smartphones, tablets, and desktop computers. Use them anywhere, anytime.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do I need to create an account?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    No account needed! Start using any tool immediately without registration. We value your time and privacy.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <h2>Ready to Boost Your Productivity?</h2>
+        <p>Join 10,000+ users who trust our tools</p>
+        <a href="#tools" class="btn btn-primary">Get Started For Free</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4 class="logo">Raakify</h4>
+                <p class="footer-tagline">Free online tools for everyday tasks. Simple, fast, and secure.</p>
+                <p style="margin-top: 1rem; font-size: 0.875rem; color: rgba(255,255,255,0.6);">&copy; 2026 Raakify. All rights reserved.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Tools</h4>
+                <ul>
+                    <li><a href="qr-generator.html">QR Code Generator</a></li>
+                    <li><a href="wordcounter.html">Word Counter</a></li>
+                    <li><a href="password-generator.html">Password Generator</a></li>
+                    <li><a href="#" style="color: var(--secondary-color);">More coming soon</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+                <div class="newsletter-signup">
+                    <input type="email" placeholder="Enter email">
+                    <button>Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Made with ❤️ by Raakesh 
+
+        </div>
+    </footer>
+
+    <!-- Minimal JavaScript for mobile menu -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
