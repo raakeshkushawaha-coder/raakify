@@ -52,43 +52,45 @@
     
     <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Word Counter Tool",
-      "applicationCategory": "UtilityApplication",
-      "operatingSystem": "Any",
-      "url": "https://raakify.com/wordcounter.html",
-      "description": "Free online word counter with real-time character count, reading time calculator, readability score, and SEO analysis tools.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "featureList": [
-        "Real-time word counting",
-        "Character count with and without spaces",
-        "Sentence and paragraph counting",
-        "Reading time calculator",
-        "Speaking time estimation",
-        "Readability score (Flesch-Kincaid)",
-        "SEO keyword density checker",
-        "Meta description length checker",
-        "Title tag optimizer",
-        "Most used words analysis",
-        "Platform character limits (Twitter, Instagram, LinkedIn, Facebook, SMS)",
-        "Text formatting tools",
-        "Find and replace",
-        "Export to TXT and CSV"
-      ],
-      "screenshot": "https://raakify.com/images/word-counter-screenshot.jpg",
-      "creator": {
-        "@type": "Organization",
-        "name": "Raakify.com",
-        "url": "https://raakify.com"
-      }
-    }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://raakify.com/wordcounter.html#software",
+  "name": "Word Counter Tool",
+  "url": "https://raakify.com/wordcounter.html",
+  "description": "Free online word counter tool with real-time word count, character counter, readability score, reading time calculator, and SEO keyword analysis.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web Browser",
+  "browserRequirements": "Requires JavaScript enabled",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Real-time word counting",
+    "Character count with and without spaces",
+    "Sentence and paragraph counter",
+    "Reading time calculator",
+    "Speaking time estimation",
+    "Flesch-Kincaid readability score",
+    "SEO keyword density checker",
+    "Meta description length checker",
+    "Title tag length optimizer",
+    "Most used words analysis",
+    "Platform character limits (Twitter, Instagram, LinkedIn, Facebook, SMS)",
+    "Find and replace tool",
+    "Text formatting tools",
+    "Export to TXT and CSV"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "Raakify",
+    "url": "https://raakify.com"
+   }
+}
+</script>
     
     <!-- FAQ Schema -->
     <script type="application/ld+json">
@@ -2271,6 +2273,7 @@ document.addEventListener('DOMContentLoaded', loadComponents);
 </body>
 
 </html>
+
 
 
 
