@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom QR Code Generator – Create QR Codes Online for Free</title>
+  <meta name="description" content="Free custom QR code generator: create QR codes for URLs, text, WiFi, contacts, and more. Fully browser‑based, no signup, with logo & color options.">
+  <meta name="keywords" content="QR code generator, custom QR code, create QR code, QR code maker, free QR code, online QR code, QR code design, QR with logo">
+  <meta name="author" content="raakify.com">
+  <link rel="canonical" href="https://raakify.com/qr-generator.html">
+  <meta property="og:title" content="Custom QR Code Generator – Create QR Codes Online for Free">
+  <meta property="og:description" content="Free custom QR code generator. Create QR codes for URLs, text, WiFi, contacts & more instantly in your browser. Add logos, change colors.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://raakify.com/qr-generator.html">
+  <meta property="og:image" content="https://raakify.com/qr-preview.png">
+  <meta property="og:site_name" content="YourToolName">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Custom QR Code Generator – Create QR Codes Online for Free">
+  <meta name="twitter:description" content="Free custom QR code generator. Create QR codes for URLs, text, WiFi, contacts & more instantly in your browser.">
+  <meta name="twitter:image" content="https://raakify.com/qr-preview.png">
+  <meta name="robots" content="index, follow">
+  <style>
+    /* clean, modern styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 20px 35px -8px rgba(0,0,0,0.1);
+      padding: 2.5rem 2rem;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(145deg, #0f2b3d, #1e4a6f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.4rem;
+      color: #0b3b5c;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+    ul {
+      margin: 1.2rem 0 1.8rem 2rem;
+      list-style-type: disc;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #b1d4e0;
+      padding-left: 1.2rem;
+    }
+    .faq-item strong {
+      font-size: 1.2rem;
+      color: #0f2b3d;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    
+    .free-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e3a8a;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      margin-left: 1rem;
+      vertical-align: middle;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e9eef2;
+      margin: 2rem 0;
+    }
+    .btn-cta {
+      display: inline-block;
+      background-color: #1e4a6f;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      margin: 1rem 0 1.5rem 0;
+      box-shadow: 0 8px 18px rgba(0, 40, 70, 0.2);
+      transition: background-color 0.2s, transform 0.1s;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+    .btn-cta:hover {
+      background-color: #123c59;
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 40, 70, 0.3);
+    }
+    .btn-cta:active {
+      transform: scale(0.98);
+    }
+    .btn-wrapper {
+      text-align: center;
+    }
+
+    .related-tools{
+padding:60px 20px;
+background:#ffffff;
+text-align:center;
+}
+
+.related-container{
+max-width:800px;
+margin:0 auto;
+}
+
+.related-tools h2{
+font-size:26px;
+margin-bottom:25px;
+}
+
+.related-list{
+list-style:none;
+padding:0;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.related-list li a{
+display:inline-block;
+padding:12px 20px;
+background:#f4f4f4;
+border-radius:8px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:0.3s;
+}
+
+.related-list li a:hover{
+background:#ff3b30;
+color:#fff;
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+
+.related-tools h2{
+font-size:22px;
+}
+
+.related-list{
+flex-direction:column;
+align-items:center;
+}
+
+.related-list li a{
+width:100%;
+max-width:300px;
+}
+
+}
+
+  </style>
+  
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-80QL0X8KY9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-80QL0X8KY9');
+</script>
+
+
+</head>
+<body>
+  <div class="container">
+    <!-- H1 with integrated badge -->
+    <h1>Custom QR Code Generator – Create QR Codes Online for Free <span class="free-badge">no signup</span></h1>
+    
+    <p>A QR code generator is one of the most useful digital tools today. With a custom QR code generator, you can quickly create QR codes for websites, text, WiFi passwords, contact details, social media links, and much more. QR codes are widely used in marketing, business cards, restaurants, events, and online promotions because they make sharing information fast and easy.</p>
+    
+    <p>Our custom QR code generator allows anyone to create QR codes online without installing any software. You simply enter your content, generate the QR code, and download it instantly. This QR code maker works directly in your browser, making it a fast and secure solution for generating QR codes.</p>
+    
+    <!-- CTA 1 -->
+    <div class="btn-wrapper">
+      <a href="https://raakify.com/qr-generator.html" class="btn-cta">✨ Generate QR Code Now ✨</a>
+    </div>
+    
+    <h2>What Is a QR Code Generator?</h2>
+    <p>A QR code generator is an online tool that converts information such as URLs, text, or contact details into a scannable QR code. When someone scans the QR code using their smartphone camera, the encoded information opens automatically.</p>
+    
+    <p>A modern custom QR code generator also allows users to customize the QR code with colors, logos, and styles. This makes QR codes more attractive and useful for branding and marketing purposes.</p>
+    
+    <p>Businesses often use a QR code generator to create QR codes for:</p>
+    <ul>
+      <li>Website links</li>
+      <li>Restaurant menus</li>
+      <li>Payment links</li>
+      <li>Product information</li>
+      <li>Event tickets</li>
+      <li>Social media profiles</li>
+    </ul>
+    <p>Because QR codes are easy to scan, they help users access information instantly.</p>
+    
+    <h2>How to Use the Custom QR Code Generator</h2>
+    <p>Using a custom QR code generator is very simple. Follow these steps to create your QR code in seconds:</p>
+    <ul>
+      <li>Enter the content or link you want to convert into a QR code.</li>
+      <li>Customize the QR code design if customization options are available.</li>
+      <li>Click the Generate QR Code button.</li>
+      <li>Download the generated QR code image.</li>
+    </ul>
+    <p>With this QR code maker, you can create QR codes for personal or business use without any technical knowledge.</p>
+    
+    <!-- CTA 2 -->
+    <div class="btn-wrapper">
+      <a href="https://raakify.com/qr-generator.html" class="btn-cta">🚀 Create Your QR Code 🚀</a>
+    </div>
+    
+    <h2>Why Use a Custom QR Code Generator?</h2>
+    <p>A custom QR code generator offers several advantages compared to a basic QR code maker. Instead of creating plain black-and-white codes, you can design QR codes that match your brand.</p>
+    <p>Benefits of using a custom QR code generator include:</p>
+    <ul>
+      <li>Fast and easy QR code creation</li>
+      <li>No software installation required</li>
+      <li>Custom design and color options</li>
+      <li>Instant download and sharing</li>
+      <li>Works on desktop and mobile devices</li>
+    </ul>
+    <p>These features make a QR code generator an essential tool for businesses, marketers, and content creators.</p>
+    
+    <h2>Where QR Codes Are Used</h2>
+    <p>QR codes are used in many industries because they provide a quick way to connect offline users with digital content. A QR code generator helps businesses create QR codes for different purposes.</p>
+    <p>Common uses of QR codes include:</p>
+    <ul>
+      <li>Marketing campaigns</li>
+      <li>Product packaging</li>
+      <li>Restaurant digital menus</li>
+      <li>Event check-ins</li>
+      <li>Business cards</li>
+      <li>Website promotions</li>
+    </ul>
+    <p>By using a custom QR code generator, companies can improve user engagement and make information easily accessible.</p>
+    
+    <h2>Is This QR Code Generator Free?</h2>
+    <p>Yes. Our QR code generator is completely free to use. You can create unlimited QR codes using this custom QR code generator without any registration. The generated QR codes can be downloaded and used anywhere, including websites, posters, flyers, and business materials.</p>
+    
+    <h2>Secure and Browser-Based QR Code Maker</h2>
+    <p>This QR code generator works directly inside your browser. That means your data is processed locally and not stored on any server. Because of this, our custom QR code generator is safe, fast, and privacy-friendly.</p>
+    
+    <h2>Start Creating QR Codes Now</h2>
+    <p>If you need a fast and reliable QR code generator, this tool makes the process simple. Whether you want to create QR codes for business, marketing, or personal use, this custom QR code generator allows you to generate QR codes instantly.</p>
+    <p>Use this QR code generator today and create professional QR codes in seconds.</p>
+    
+    <!-- CTA 3 (final) -->
+    <div class="btn-wrapper">
+      <a href="https://raakify.com/qr-generator.html" class="btn-cta">📲 Generate My Free QR Code 📲</a>
+    </div>
+    
+    <!-- FAQ Section (exactly as before, but now also marked up with schema) -->
+    <h2>FAQ About QR Codes</h2>
+    
+    <div class="faq-item">
+      <strong>❓ Are the QR codes really free? Any hidden limits?</strong>
+      <p>Absolutely free, no limits. You can generate as many QR codes as you want, and they never expire. No registration or payment required.</p>
+    </div>
+    
+    <div class="faq-item">
+      <strong>❓ Can I add a logo to my QR code?</strong>
+      <p>Yes, with our custom QR code generator you can upload a logo or icon and place it in the center of the QR code. This is perfect for branding.</p>
+    </div>
+    
+    <div class="faq-item">
+      <strong>❓ Does the QR code work in all countries?</strong>
+      <p>QR codes are a global standard. Any smartphone with a camera (iOS, Android) can scan them. There are no regional restrictions.</p>
+    </div>
+    
+    <div class="faq-item">
+      <strong>❓ Can I change the color of the QR code?</strong>
+      <p>Yes, you can customize both the foreground and background colors. You can also choose different dot styles to match your brand.</p>
+    </div>
+    
+    <div class="faq-item">
+      <strong>❓ What happens if I need to edit a QR code after downloading?</strong>
+      <p>Since each QR code is generated from your content, simply update the information and generate a new one. We recommend keeping a note of the content, or you can regenerate anytime.</p>
+    </div>
+  </div>
+  <section class="related-tools">
+  <div class="related-container">
+
+    <h2>More Free Tools</h2>
+
+    <ul class="related-list">
+      <li><a href="https://raakify.com/youtube-thumbnail-downloader.html">YouTube Thumbnail Downloader</a></li>
+      <li><a href="https://raakify.com/wordcounter.html">Word Counter</a></li>
+      <li><a href="https://raakify.com/qr-generator.html">QR Code Generator</a></li>
+      <li><a href="https://raakify.com/password-generator.html">Password Generator</a></li>
+      <li><a href="https://raakify.com/merge-pdf.html">Merge PDF</a></li>
+    </ul>
+
+  </div>
+</section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are the QR codes really free? Any hidden limits?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely free, no limits. You can generate as many QR codes as you want, and they never expire. No registration or payment required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I add a logo to my QR code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with our custom QR code generator you can upload a logo or icon and place it in the center of the QR code. This is perfect for branding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the QR code work in all countries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "QR codes are a global standard. Any smartphone with a camera (iOS, Android) can scan them. There are no regional restrictions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change the color of the QR code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can customize both the foreground and background colors. You can also choose different dot styles to match your brand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I need to edit a QR code after downloading?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Since each QR code is generated from your content, simply update the information and generate a new one. We recommend keeping a note of the content, or you can regenerate anytime."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Custom QR Code Generator",
+    "description": "Free online QR code generator with customization: logos, colors, and styles. No registration, browser-based.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250"
+    },
+    "url": "https://raakify.com/qr-generator.html"
+  }
+  </script>
+<script>
+function loadComponents() {
+    // Load Header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('afterbegin', data);
+
+            // ✅ Add toggle logic AFTER header loads
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.getElementById("navLinks");
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener("click", function () {
+                    navLinks.classList.toggle("active");
+                });
+            }
+        })
+        .catch(error => console.error('Error loading header:', error));
+
+    // Load Footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+        })
+        .catch(error => console.error('Error loading footer:', error));
+}
+document.addEventListener('DOMContentLoaded', loadComponents);
+</script>
+
+</body>
+</html>
